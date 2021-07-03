@@ -1,0 +1,271 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins";
+}
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  z-index: 10;
+}
+
+nav {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  font-size: 2rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 35%;
+  list-style-type: none;
+}
+
+.login-active {
+  padding: 5px 20px;
+  border: 1px solid black;
+}
+.login-active:hover {
+  background-color: black;
+  color: white;
+}
+
+.textarea {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  padding-left: 5rem;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.textarea p {
+  font-size: 5rem;
+  font-weight: lighter;
+  overflow: hidden;
+}
+
+.textarea p span {
+  display: inline-block;
+  transform: translateY(100%);
+}
+
+.passage {
+  width: 90%;
+  margin-top: 1rem;
+  height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.passage p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.passage a {
+  width: 7rem;
+  text-decoration: none;
+  padding: 6px 12px;
+  text-align: center;
+  background-color: rgb(255, 205, 140);
+  color: black;
+}
+
+.passage a:hover {
+  background-color: black;
+  color: white;
+}
+
+.images {
+  height: 100vh;
+  width: 50%;
+  background-color: antiquewhite;
+}
+
+.images img {
+  height: 100vh;
+  width: 50%;
+  position: absolute;
+  display: none;
+  transition: all 1s ease;
+  object-fit: cover;
+}
+
+.bottombar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 10;
+}
+
+.bottombar a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: black;
+}
+
+.bottombar span {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.bottombar span:before,
+.bottombar span:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  top: 50%;
+  margin-top: -0.5px;
+}
+
+.bottombar span:before {
+  left: -2px;
+}
+.bottombar span:after {
+  right: 2.5px;
+  background: rgb(255, 205, 140);
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.bottombar span:hover:before {
+  background: rgb(255, 205, 140);
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.bottombar span:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}
+
+/* container 2 */
+
+.container2 {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background-color: rgb(255, 255, 255);
+  transform: translateX(10%) scale(0.9);
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.side-nav {
+  height: 100vh;
+  width: 3rem;
+  position: absolute;
+  right: 0;
+  display: flex;
+}
+
+.side-nav a {
+  margin-top: 2rem;
+  color: black;
+  font-size: 2rem;
+}
+
+.text-area {
+  width: 60%;
+}
+
+.text-area h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.cards {
+  width: 60%;
+  height: 45vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card1,
+.card2,
+.card3 {
+  height: 20rem;
+  width: 15rem;
+  background-position: center;
+  background-size: cover;
+  transition: all 1s ease;
+}
+
+.card1:hover,
+.card2:hover,
+.card3:hover {
+  transform: scale(1.1);
+}
+
+.card1 {
+  background-image: url("./assets/pure-julia-rKKBYwhevsw-unsplash.jpg");
+}
+.card2 {
+  background-image: url("/assets/pure-julia-LCZF0qUDTmI-unsplash.jpg");
+}
+.card3 {
+  background-image: url("/assets/oshin-khandelwal-fq839fSNEuo-unsplash.jpg");
+}
+
+.bottom-nav {
+  height: 4rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-top: 2px solid whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5rem;
+  align-items: center;
+}
+
+.bottom-nav ul {
+  display: flex;
+  width: 10%;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+.bottom-nav ul li {
+  font-size: 1.2rem;
+}
